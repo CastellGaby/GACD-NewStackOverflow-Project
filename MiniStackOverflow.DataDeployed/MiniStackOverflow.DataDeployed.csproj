@@ -51,9 +51,9 @@
   <ItemGroup>
     <Compile Include="GenericRepository.cs" />
     <Compile Include="IGenericRepository.cs" />
-    <Compile Include="Migrations\201504060731469_Initial.cs" />
-    <Compile Include="Migrations\201504060731469_Initial.Designer.cs">
-      <DependentUpon>201504060731469_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201504060836026_Initial.cs" />
+    <Compile Include="Migrations\201504060836026_Initial.Designer.cs">
+      <DependentUpon>201504060836026_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MiniStackOverflowContext.cs" />
@@ -71,8 +71,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201504060731469_Initial.resx">
-      <DependentUpon>201504060731469_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201504060836026_Initial.resx">
+      <DependentUpon>201504060836026_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
