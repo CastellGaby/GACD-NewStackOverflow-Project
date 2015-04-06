@@ -1,5 +1,0 @@
-C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.Domain\bin\Debug\MiniStackOverflow.Domain.dll
-C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.Domain\bin\Debug\MiniStackOverflow.Domain.pdb
-C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.Domain\obj\Debug\MiniStackOverflow.Domain.csprojResolveAssemblyReference.cache
-C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.Domain\obj\Debug\MiniStackOverflow.Domain.dll
-C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.Domain\obj\Debug\MiniStackOverflow.Domain.pdb
