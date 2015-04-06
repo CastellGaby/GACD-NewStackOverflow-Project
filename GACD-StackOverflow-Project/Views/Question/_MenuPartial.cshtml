@@ -5,12 +5,31 @@
     {
         @Html.AntiForgeryToken()
 
+    /*
         <ul class="nav nav-tabs">
-            <a href="#" class="btn btn-primary btn-info">Ask Question <span class="?"></span></a>
+          <li class="active"><a href="#index" data-toggle="tab">Home</a></li>
+          <li><a href="#profile" data-toggle="tab">Profile</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Dropdown <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#dropdown1" data-toggle="tab">Action</a></li>
+              <li class="divider"></li>
+              <li><a href="#dropdown2" data-toggle="tab">Another action</a></li>
+            </ul>
+          </li>
+    </ul>
+    */
+    
+    
+        <ul class="nav nav-tabs">
+            @*<a href="#" class="btn btn-primary btn-info">Ask Question <span class="?"></span></a>
             <a href="#" class="btn btn-primary btn-info">Question<span class="?"></span></a>
-            <a href="#" class="btn btn-primary btn-info">User<span class="?"></span></a><li></li>
-            <li>@Html.ActionLink("Question", "AskQuestion", "Question", routeValues: null, htmlAttributes: new {id = "registerLink"})</li>
-            <li>@Html.ActionLink("Users", "AskQuestion", "Question", routeValues: null, htmlAttributes: new {id = "registerLink"})</li>
+            <a href="#" class="btn btn-primary btn-info">User<span class="?"></span></a><li></li>*@
+            <li>@Html.ActionLink("Home", "Index", "Question", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+            <li>@Html.ActionLink("Ask Question", "AskQuestion", "Question", routeValues: null, htmlAttributes: new {id = "registerLink"})</li>
+            <li>@Html.ActionLink("Profile", "Profile", "Account", routeValues: null, htmlAttributes: new {id = "registerLink"})</li>
 
         </ul>
     }

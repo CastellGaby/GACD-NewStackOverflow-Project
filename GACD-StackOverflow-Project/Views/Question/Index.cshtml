@@ -7,20 +7,36 @@
 
 <h4>Top Questions</h4>
 
-<div>@*@Html.Partial("_MenuPartial")*@</div>
-<hr>
-<hr>
+<div>@Html.Partial("_MenuPartial")</div>
 
-<ul>
-        @foreach (var item in Model)
-    {
+
+<ul type="none">
+    @foreach (var item in Model)
+{
+       
+        
+  
         <li>
-           <h3>@Html.ActionLink(@item.Title, "DetailQuestion", "Question", new { questionId = item.Id }, null)</h3> 
-           
-            @item.Votes
-            @item.Views
-            asked at @item.CreationDate
-             by @Html.ActionLink(@item.Name + " " + @item.Lastname, "Profile", "Account", new {OwnerId = item.OwnerUserId}, null)
+            <hr>
+            <div>
+
+                <h4>@Html.ActionLink(@item.Title, "DetailQuestion", "Question", new {questionId = item.Id}, null)</h4>
+                <ll>
+                    asked at @item.CreationDate by @Html.ActionLink(@item.Name + " " + @item.Lastname, "Profile", "Account", new {OwnerId = item.OwnerUserId}, null)
+                </ll>
+                <h6>
+                    <span class="label label-primary">Views @item.Views</span>
+                    <span class="label label-primary">Votes @item.Votes</span>
+                    <span class="label label-primary">Answers @item.QCounterAnswers</span>
+                </h6>
+
+
+            </div>
+          
         </li>
     }
 </ul>
+
+
+                            
+                     
