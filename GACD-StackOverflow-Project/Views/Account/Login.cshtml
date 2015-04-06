@@ -1,0 +1,65 @@
+﻿@model GACD_StackOverflow_Project.Models.AccountLoginModel
+
+@{
+    ViewBag.Title = "Login";
+    
+}
+<head>
+    <title>
+        
+    </title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<h2>MiniStackOverflow</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Login</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @if (TempData["Updated"] != null)
+        {   <p>@TempData["Updated"].ToString()</p>
+        }
+
+        @if (TempData["Fail"] != null)
+        {   <p>@TempData["Fail"].ToString()</p>
+        }
+
+        @if (TempData["NotLogin"] != null)
+        {
+            <p>@TempData["NotLogin"].ToString()</p>
+        }
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+        </div>
+        @if (Model.ImnotRobot)
+        {
+            <div class="g-recaptcha" data-sitekey="6LfR4AQTAAAAAFip4uarB-tTcTegIWPaMHEcZWIQ"></div>
+        }
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Forgot Password", "PasswordRecovery")
+                <input type="submit" value="Log in" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+}
+
+

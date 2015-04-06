@@ -1,0 +1,105 @@
+﻿@model GACD_StackOverflow_Project.Models.QuestionDetailModel
+
+<div>
+    <h4>QuestionDetailModel</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.Username)*@
+            by 
+            @Html.ActionLink(Model.Name + " " + Model.LastName, "Profile", "Account", new { OwnerId = Model.OwnerUserId }, null)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerUserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModificationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModificationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Votes)
+        </dt>
+
+        <dd>
+
+            @using (Html.BeginForm("VotePlusQuestion", "Question", new {questId = Model.Id }))
+            {
+                <input type="submit" value="+" class="btn btn-info" />
+            }
+
+            @using (Html.BeginForm("VoteLessQuestion", "Question", new { questId = Model.Id }))
+            {
+                <input type="submit" value="-" class="btn btn-info" />
+            }
+
+            @Html.DisplayFor(model => model.Votes)
+            @*@Html.DisplayFor(model => model.Id)*@
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Views)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Views)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QCounterAnswers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QCounterAnswers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QCorrectAnswers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QCorrectAnswers)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Answer Question", "AnswerQuestion","Answer", new { questionId = Model.Id },null) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

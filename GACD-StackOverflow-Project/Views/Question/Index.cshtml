@@ -1,0 +1,26 @@
+﻿@model IEnumerable<GACD_StackOverflow_Project.Models.QuestionListModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>MiniStackOverflow</h2>
+
+<h4>Top Questions</h4>
+
+<div>@*@Html.Partial("_MenuPartial")*@</div>
+<hr>
+<hr>
+
+<ul>
+        @foreach (var item in Model)
+    {
+        <li>
+           <h3>@Html.ActionLink(@item.Title, "DetailQuestion", "Question", new { questionId = item.Id }, null)</h3> 
+           
+            @item.Votes
+            @item.Views
+            asked at @item.CreationDate
+             by @Html.ActionLink(@item.Name + " " + @item.Lastname, "Profile", "Account", new {OwnerId = item.OwnerUserId}, null)
+        </li>
+    }
+</ul>

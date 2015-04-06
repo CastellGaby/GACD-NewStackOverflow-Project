@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOut", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="nav nav-tabs">
+            <a href="#" class="btn btn-primary btn-info">Ask Question <span class="?"></span></a>
+            <a href="#" class="btn btn-primary btn-info">Question<span class="?"></span></a>
+            <a href="#" class="btn btn-primary btn-info">User<span class="?"></span></a><li></li>
+            <li>@Html.ActionLink("Question", "AskQuestion", "Question", routeValues: null, htmlAttributes: new {id = "registerLink"})</li>
+            <li>@Html.ActionLink("Users", "AskQuestion", "Question", routeValues: null, htmlAttributes: new {id = "registerLink"})</li>
+
+        </ul>
+    }
+}
+

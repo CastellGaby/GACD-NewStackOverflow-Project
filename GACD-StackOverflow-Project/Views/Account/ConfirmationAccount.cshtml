@@ -1,0 +1,33 @@
+﻿@model GACD_StackOverflow_Project.Models.AccountConfirmationAccountModel
+
+@{
+    ViewBag.Title = "ConfirmationAccount";
+}
+
+<h2>ConfirmationAccount</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>AccountConfirmationAccountModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @using (Html.BeginForm("ConfirmationAccount", "Account", new { idAccount = Model.idAccount}))
+        {
+             <input type="submit" value="Active Account" class="btn btn-info" />
+        }
+
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

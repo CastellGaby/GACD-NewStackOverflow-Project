@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "_MenuPartial";
+}
+
+<h2>_MenuPartial</h2>
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOut", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="nav navbar-nav navbar-right">
+            
+            <li>@Html.ActionLink("Ask Question", "AskQuestion", "Question", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+
+            
+        </ul>
+    }
+}
