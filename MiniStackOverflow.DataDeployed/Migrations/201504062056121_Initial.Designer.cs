@@ -13,7 +13,7 @@ namespace MiniStackOverflow.DataDeployed.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201504060836026_Initial"; }
+            get { return "201504062056121_Initial"; }
         }
         
         string IMigrationMetadata.Source
