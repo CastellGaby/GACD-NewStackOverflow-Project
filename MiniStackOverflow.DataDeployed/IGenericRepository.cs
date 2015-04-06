@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MiniStackOverflow.DataDeployed
 {
-    public interface IGenericRepository<TEntity>  : IDisposable
+    public interface IGenericRepository<TEntity> :IDisposable 
     {
         IEnumerable<TEntity> Get(
             Expression<Func<TEntity, bool>> filter = null,
