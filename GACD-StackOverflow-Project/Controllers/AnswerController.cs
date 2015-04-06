@@ -49,7 +49,7 @@ namespace GACD_StackOverflow_Project.Controllers
         }
 
         /*----------------AnswerList---------------------------------------------*/
-
+        /*
         public ActionResult AnswerList(Guid questionId)
         {
             List<AnswerListAnswersModel> Models=new List<AnswerListAnswersModel>();
@@ -67,7 +67,7 @@ namespace GACD_StackOverflow_Project.Controllers
             }
       
             return View(Models);
-         }
+         }*/
 
         /*----------------VotesAnswer---------------------------------------------*/
         [HttpPost]
@@ -91,6 +91,7 @@ namespace GACD_StackOverflow_Project.Controllers
 
             return RedirectToAction("DetailQuestion", "Question", new { questionId = ans.QuestionId }); ;
         }
+        /*limpio*/
 	}
 
    

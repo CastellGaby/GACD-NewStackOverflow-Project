@@ -227,7 +227,7 @@ namespace GACD_StackOverflow_Project.Controllers
             
             return RedirectToAction("Login");
         }
-        //clean 2
-        
+        /*-todo limpio-*/
+
     }
 }
