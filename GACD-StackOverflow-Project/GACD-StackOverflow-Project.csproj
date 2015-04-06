@@ -183,6 +183,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Models\AccountRecoveryAccountModel.cs" />
+    <Compile Include="Models\AnswerListAnswersModel.cs" />
     <Compile Include="Models\AnswerResponseQuestionModel.cs" />
     <Compile Include="Models\AccountConfirmationAccountModel.cs" />
     <Compile Include="Models\ConfirmationAccount.cs" />

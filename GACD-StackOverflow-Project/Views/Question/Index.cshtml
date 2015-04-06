@@ -11,30 +11,39 @@
 
 
 <ul type="none">
-    @foreach (var item in Model)
+@foreach (var item in Model)
 {
-       
-        
-  
-        <li>
-            <hr>
-            <div>
+    <div class="form-horizontal">
+        <hr>
+      
+        <div class="form-group">
 
-                <h4>@Html.ActionLink(@item.Title, "DetailQuestion", "Question", new {questionId = item.Id}, null)</h4>
+            <div class="col-md-1">
+                <h2><span class="label label-default">@item.QCounterAnswers</span></h2>
+                <h6><span class="label label-default">Answers</span></h6>
+            </div>
+            <div class="col-md-10">
+
+                <h4>@Html.ActionLink(@item.Title, "DetailQuestion", "Question", new { questionId = item.Id }, null)</h4>
                 <ll>
-                    asked at @item.CreationDate by @Html.ActionLink(@item.Name + " " + @item.Lastname, "Profile", "Account", new {OwnerId = item.OwnerUserId}, null)
+                    asked at @item.CreationDate by @Html.ActionLink(@item.Name + " " + @item.Lastname, "Profile", "Account", new { OwnerId = item.OwnerUserId }, null)
                 </ll>
                 <h6>
                     <span class="label label-primary">Views @item.Views</span>
                     <span class="label label-primary">Votes @item.Votes</span>
-                    <span class="label label-primary">Answers @item.QCounterAnswers</span>
                 </h6>
 
 
             </div>
-          
-        </li>
-    }
+
+        </div>
+    </div>
+    
+        
+        
+
+  
+}
 </ul>
 
 

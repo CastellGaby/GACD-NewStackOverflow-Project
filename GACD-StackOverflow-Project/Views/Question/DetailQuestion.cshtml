@@ -1,8 +1,9 @@
 ﻿@model GACD_StackOverflow_Project.Models.QuestionDetailModel
 
+
 <div>
     <h4>QuestionDetailModel</h4>
-	<hr />
+    <hr/>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Title)
@@ -26,8 +27,8 @@
 
         <dd>
             @*@Html.DisplayFor(model => model.Username)*@
-            by 
-            @Html.ActionLink(Model.Name + " " + Model.LastName, "Profile", "Account", new { OwnerId = Model.OwnerUserId }, null)
+            by
+            @Html.ActionLink(Model.Name + " " + Model.LastName, "Profile", "Account", new {OwnerId = Model.OwnerUserId}, null)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.OwnerUserId)
@@ -59,14 +60,14 @@
 
         <dd>
 
-            @using (Html.BeginForm("VotePlusQuestion", "Question", new {questId = Model.Id }))
+            @using (Html.BeginForm("VotePlusQuestion", "Question", new {questId = Model.Id}))
             {
-                <input type="submit" value="+" class="btn btn-info" />
+                <input type="submit" value="+" class="btn btn-info"/>
             }
 
-            @using (Html.BeginForm("VoteLessQuestion", "Question", new { questId = Model.Id }))
+            @using (Html.BeginForm("VoteLessQuestion", "Question", new {questId = Model.Id}))
             {
-                <input type="submit" value="-" class="btn btn-info" />
+                <input type="submit" value="-" class="btn btn-info"/>
             }
 
             @Html.DisplayFor(model => model.Votes)
@@ -96,9 +97,15 @@
         <dd>
             @Html.DisplayFor(model => model.QCorrectAnswers)
         </dd>
-
+       
+    </dl>
+    <dl class="dl-horizontal">
+        
     </dl>
 </div>
+
+
+
 <p>
     @Html.ActionLink("Answer Question", "AnswerQuestion","Answer", new { questionId = Model.Id },null) |
     @Html.ActionLink("Back to List", "Index")

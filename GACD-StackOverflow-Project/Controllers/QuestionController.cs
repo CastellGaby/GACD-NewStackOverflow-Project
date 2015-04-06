@@ -71,10 +71,10 @@ namespace GACD_StackOverflow_Project.Controllers
 
             question.CreationDate = DateTime.Now;
             question.ModificationDate = DateTime.Now;
-            //question.OwnerUserId = Guid.Parse(HttpContext.User.Identity.Name);
+            
             unitOfWork.QuestionRepository.Insert(question);
             unitOfWork.Save();
-            //context.Questions.Add(question);
+           
 
             context.SaveChanges();
             return RedirectToAction("Index", "Question");
